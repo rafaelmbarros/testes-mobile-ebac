@@ -1,7 +1,6 @@
 class HomeScreen {
-  async goToForms() {
-    const selector = '//android.widget.Button[@content-desc="Forms"]';
-    const button = $(`${selector}`);
+  async goToLogin() {
+    const button = $(`id:button_login_store`);
     button.click();
   }
 }
