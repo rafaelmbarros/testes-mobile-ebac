@@ -4,7 +4,7 @@ const formScreen = require('../screens/form.screen');
 describe('Access Admin Panel', () => {
   it('should login with valid credentials', async () => {
     await homeScreen.goToLogin();
-    // await formScreen.waitForIsShown(true);
+
     await formScreen.fillForms();
     await formScreen.continueWithCredentials();
     await formScreen.fillCredentials();
@@ -14,5 +14,7 @@ describe('Access Admin Panel', () => {
     await formScreen.addProduct();
     await formScreen.chooseProductType();
     await formScreen.fillProductsDetails();
+
+    expect($('~More options')).toBeDisplayed();
   });
 });
